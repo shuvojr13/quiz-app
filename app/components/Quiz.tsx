@@ -12,7 +12,7 @@ const Quiz = () => {
       <p className="md:text-lg text-white bg-indigo-900 rounded-md p-2 m-2 text-center">
         Challenge your knowledge and have fun!
       </p>
-      <Link href="/login" className="rounded-2xl bg-violet-600 text-white p-4 font-bold text-center">
+      <Link href="/quiz" className="rounded-2xl bg-violet-600 text-white p-4 font-bold text-center">
           Start Quiz
       </Link>
     </div>

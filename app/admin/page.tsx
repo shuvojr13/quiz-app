@@ -1,9 +1,11 @@
 import React from 'react'
 
-const page = () => {
+const Admin = () => {
   return (
-    <div>page</div>
+    <div>
+       <h2 className='text-2xl font-bold text-violet-800 underline'>Admin Panel</h2>
+    </div>
   )
 }
 
-export default page
+export default Admin

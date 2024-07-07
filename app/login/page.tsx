@@ -30,7 +30,7 @@ const LoginPage = () => {
  
       <div className="flex justify-center items-center h-screen">
         <form onSubmit={handleSubmit} className="w-full max-w-sm p-4 bg-white rounded-lg shadow-lg border-2 border-indigo-300">
-          <h2 className="text-center text-white p-2 rounded-md bg-pink-800 text-2xl font-bold mb-4">Log In</h2>
+          <h2 className="text-center text-indigo-800 p-2 rounded-md text-2xl font-bold mb-4">Log In</h2>
 
           {error && <p className="text-red-500 mb-2">{error}</p>}
 
