@@ -3,6 +3,7 @@ import React from "react";
 import Nav from "./components/nav"; 
 import Footer from "./components/Footer"; 
 import Quiz from "./components/Quiz"; 
+import Instruction from "./components/Instruction"; 
 import Image from "next/image";
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
             className="rounded-md h-40"
           />
         </div>
+        <Instruction/>
       </div>
       <Footer />
     </div>

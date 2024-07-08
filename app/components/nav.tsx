@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from "next/image";
 
 
+
 function Nav() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
@@ -62,7 +63,7 @@ function Nav() {
                 <Link href="/">Home</Link>
               </li>
              
-              <li className="flex flex-row px-2 py-1 m-1 rounded-md border-2 hover:font-bold sm:m-0 grow hover:bg-pink-400">
+              <li className="flex flex-row items-center px-2 py-1 m-1 rounded-md border-2 hover:font-bold sm:m-0 grow hover:bg-pink-400">
                 
                 <Link href="/signup">Sign Up</Link>
               </li>

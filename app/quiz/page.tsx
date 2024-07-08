@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Nav from '../components/nav';
 import Footer from '../components/Footer';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 
 // Example quiz data
 const quizData = [
@@ -84,9 +85,10 @@ const Quiz: React.FC = () => {
 
   if (quizCompleted) {
     return (
-      <div className='flex flex-col items-center justify-center p-12 gap-4'>
+      <div className='flex flex-col items-center justify-center p-12 gap-4 border border-gray-100 bg-sky-200 h-screen'>
+        <EmojiEventsIcon className="text-orange-800" style={{ height: '64px', width: '64px' }}/>
         <h2 className='bg-green-900 p-2 rounded-md text-white font-bold text-2xl'>Quiz Completed!</h2>
-        <p className='text-lg font-bold text-pink-800'>Your score: {score} / {quizData.length}</p>
+        <p className='text-xl font-bold text-pink-950 p-2 bg-gray-100 rounded'>Your score: {score} / {quizData.length}</p>
         <button onClick={handleRestartQuiz} className='bg-violet-900 text-white py-2 px-4 rounded-md'>Restart Quiz</button>
       </div>
     );
@@ -95,11 +97,11 @@ const Quiz: React.FC = () => {
   return (
     <>
       <Nav />
-      <div className='flex flex-col items-center justify-center p-4 h-screen'>
+      <div className='flex flex-col items-center justify-center p-4 h-screen m-2 bg-sky-50 rounded border border-pink-800'>
         <h2 className='bg-indigo-900 p-2 rounded-xl text-white font-bold'>Question {currentQuestion + 1}</h2>
-        <p className='text-lg font-bold text-pink-800'>{quizData[currentQuestion].question}</p>
-        <p className='text-red-600 font-bold'>Time Left: {timeLeft} seconds</p>
-        <form onSubmit={handleSubmit} className='p-4 m-2 border border-gray-100 w-1/2'>
+        <p className='text-lg sm:text-xl sm:p-4 p-2 text-center font-bold text-pink-800'>{quizData[currentQuestion].question}</p>
+        <p className='bg-red-800 text-white p-2 rounded font-bold'>Time Left: {timeLeft} seconds</p>
+        <form onSubmit={handleSubmit} className='bg-white p-4 m-2 border border-gray-100 w-full sm:w-1/2 shadow-lg'>
           {quizData[currentQuestion].options.map((option, index) => (
             <div key={index}>
               <label>

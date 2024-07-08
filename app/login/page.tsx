@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Nav from '../components/nav';
 import Footer from '../components/Footer';
+import LockPersonIcon from '@mui/icons-material/LockPerson';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -29,7 +30,11 @@ const LoginPage = () => {
       <Nav />
  
       <div className="flex justify-center items-center h-screen">
+      
         <form onSubmit={handleSubmit} className="w-full max-w-sm p-4 bg-white rounded-lg shadow-lg border-2 border-indigo-300">
+          <div className='flex flex-col items-center'>
+          <LockPersonIcon className='text-violet-900 text-3xl'/>
+          </div>
           <h2 className="text-center text-indigo-800 p-2 rounded-md text-2xl font-bold mb-4">Log In</h2>
 
           {error && <p className="text-red-500 mb-2">{error}</p>}
